@@ -1,0 +1,279 @@
+:root {
+  --Blue-Green: #0095c3;
+  --Charcoal: #2b4450;
+  --Orange-Pantone: #f75c03;
+  --Jonquil: #f1c40f;
+  --Dogwood-rose: #d90368;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
+  font-family:  sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* :start header */
+header {
+  background-image: linear-gradient(
+    to left,
+    #0095c3,
+    #56a8c9,
+    #82bbd0,
+    #aeddd7,
+    #0096c365
+  );
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+header .container .logo p {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+header .container ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+header .container ul li {
+  list-style: none;
+  border: 1px solid black;
+  margin-right: 30px;
+  padding: 5px 20px;
+  cursor: pointer;
+  position: relative;
+  color: black;
+  font-size: 20px;
+}
+header a{
+  text-decoration: none;
+}
+
+
+/* :end header */
+
+/* :start leding */
+.boxs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.boxs .box {
+  position: relative;
+  cursor: pointer;
+}
+
+.boxs .box::before {
+  content: "";
+  background: #d903681f;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 37px;
+}
+.boxs .box img {
+  width: 100%;
+  height: 100%;
+}
+.boxs .box h3 {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+}
+@media (max-width: 560px) {
+  .boxs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* :end leding */
+
+/* :start section */
+section {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.header{
+  width: 100%;
+  background-image: linear-gradient(
+    to left,
+    #0095c3,
+    #56a8c9,
+    #82bbd0,
+    #aeddd7,
+    #0096c365
+  );
+}
+.header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.header .container i{
+  cursor: pointer;
+  font-size: 25px;
+
+}
+section .box {
+  display: flex;
+  /* flex-direction: row-reverse; */
+  align-items: center;
+  position: relative;
+  width: 100%;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+section .box::before {
+  content: "";
+  background: #9e9e9e;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+}
+section .box:hover {
+  background-color: #ff03791f;
+}
+section .box .text {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end;
+  justify-content: flex-end; */
+  gap: 4px;
+  margin-right: 5px;
+}
+section .box img {
+  width: 110px;
+  height: 110px;
+
+}
+section .box h4 {
+  color: var(--Dogwood-rose);
+}
+section .box p {
+  color: var(--Charcoal);
+}
+
+/* :end section */
+
+/* :start recipewrinkle */
+#recipe{
+  display: flex;
+  flex-direction: column;
+}
+.recipewrinkle{
+  display: none;
+  flex-direction: column;
+}
+.recipewrinkle header .container i{
+  cursor: pointer;
+}
+.recipewrinkle .box{
+  position: relative;
+}
+.recipewrinkle .box::before{
+  content: "";
+  background: #d903681f;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 37px;
+}
+.recipewrinkle .box img{
+  width: 100%;
+}
+.recipewrinkle .box h3{
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+}
+
+
+/* :end recipewrinkle */
+
+/* :start footer */
+.footer {
+  background-color: var(--Dogwood-rose);
+  color: #fff;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+footer .mmi{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.footer-title {
+  font-size: 1.3em;
+  font-weight: 600;
+  text-align: left;
+}
+
+.footer-title span {
+  color: var(--Jonquil);
+}
+
+.footer .social-icons a {
+  font-size: 1.3em;
+  padding: 0 12px 0 0;
+  color: #fff;
+}
+
+footer .copy{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 5px;
+
+}
