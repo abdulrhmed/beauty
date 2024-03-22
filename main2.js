@@ -249,7 +249,7 @@ document.getElementById("leaderDandruff").addEventListener("click", () => {
       recipeSilkhair3.style.display='flex';
       recipe.style.display='none'
       document.getElementById('exetrecipeSilkhair3').addEventListener('click' ,()=>{
-      recipeDandruff3.style.display='none';
+      recipeSilkhair3.style.display='none';
       recipe.style.display='flex'
     document.getElementById('footer').style.display='flex'
 
